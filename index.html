@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sentiment Based Product Recommendation System</title>
+        <style>
+            body{
+                background-color :antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Sentiment Based Product Recommendation System</h1>
+        </div>
+        <form action="/recommendations" method="post">
+            <input type="text" name="username" id="username" placeholder="Enter username">
+            <button type="submit">Submit</button>
+        </form>
+
+    </br>
+
+        <div>
+            <h3>Sample usernames</h3>
+            <ul>
+                <li>mike</li>
+                <li>cookie</li>
+                <li>ammi</li>
+                <li>planelady</li>
+                <li>floyd</li>
+            </ul>
+        </div>
+
+    </br>
+
+        {% if error %}<div>{{ error }}</div>{% endif %}
+
+    </body>
+</html>

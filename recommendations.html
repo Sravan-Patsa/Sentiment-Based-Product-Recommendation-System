@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recommendation Page</title>
+        <style>
+            body{
+                background-color :antiquewhite;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Sentiment Based Product Recommendation System</h1>
+            <h2>Top 5 recommendation for user: {{ username }}</h2>
+        </div>
+
+        <table>
+            <tr>
+              <th>Product</th>
+              <th>Rating</th>
+            </tr>
+            {% for product in products %}
+            <tr>
+              <td>{{ product[0] }}</td>
+              <td>{{ product[1] }}</td> 
+            </tr>
+            {% endfor %}
+          </table>
+        </br>
+        <a href="/">Home</a>
+    </body>
+</html>
